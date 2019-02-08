@@ -65,7 +65,7 @@ model.save_weights('your_model.h5')
 prediction = loaded_model.predict(img_for_prediction)
 ```  
 
-## 3. Set up backend in app.py
+## 3. Set up backend in app.py with the trained model from saved model.json
 
 ### 3.1 Define classes according to the classes you are using
 ```
@@ -76,8 +76,14 @@ classes = {'our_class_name_1': 0, 'our_class_name_2': 1, 'our_class_name_3': 2 .
 ```
 image_size = (<your size>,<your size>)
 ```  
+
+## 5. Run the backend for predicitions
+`python app.py`
+
 ## 4. Run frontend
 `cd /frontend`  
 `npm start`  
-## 5. Run backend
-`python app.py`
+
+### 4.1 Visit `http://localhost:3000` to test the newly trained model by uploading an image
+
+
